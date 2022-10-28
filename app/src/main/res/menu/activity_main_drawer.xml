@@ -17,10 +17,6 @@
             android:icon="@android:drawable/ic_popup_sync"
             android:title="Mostrar aleatoriamente" />
         <item
-            android:id="@+id/nav_consulta"
-            android:icon="@android:drawable/ic_menu_search"
-            android:title="Consultar Cita" />
-        <item
             android:id="@+id/nav_list"
             android:icon="@android:drawable/ic_menu_sort_by_size"
             android:title="Listar citas" />

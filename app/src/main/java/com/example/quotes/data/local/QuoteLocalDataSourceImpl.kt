@@ -24,12 +24,20 @@ class QuoteLocalDataSourceImpl  @Inject constructor(private val quoteDao: QuoteD
         return  quoteDao.getQuoteRandom().map { it!!.toQuoteModel() }
     }
 
+    override suspend fun deleteQuote(id: Int): Int {
+        TODO("Not yet implemented")
+    }
+
     override suspend fun insertAll(quotes: List<QuoteModel>) {
         quoteDao.insertAll(quotes!!.map { it.toEntity()})
     }
 
-    override suspend fun insert(quoteModel: QuoteModel) {
-        quoteDao.insert(quoteModel.toEntity())
+    override suspend fun insert(quoteModel: QuoteModel):Long {
+        return quoteDao.insert(quoteModel.toEntity())
+    }
+
+    override suspend fun getLatestId(): Int {
+        TODO("Not yet implemented")
     }
 
 }
