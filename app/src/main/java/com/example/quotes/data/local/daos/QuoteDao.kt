@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface QuoteDao {
     @Insert
-    suspend fun insert(quote: QuoteEntity):Long
+    suspend fun insert(quote: QuoteEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(quotes: List<QuoteEntity>)
